@@ -1,0 +1,88 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    background: url(anhca/underwater.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.fish-container {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.fish-container img {
+    height: 100px;
+    position: absolute;
+}
+
+.shark {
+    position: absolute;
+    bottom: 30%;
+    width: auto;
+    animation: swim-right 8s infinite;
+}
+
+.turtle {
+    position: absolute;
+    bottom: 50%;
+    width: auto;
+    animation: swim-left 8s infinite;
+}
+
+.diver1, .diver2, .diver3{
+    position: absolute;
+    bottom: 10%;
+    width: 200px;
+    animation: swim-updown 6s infinite;
+}
+.diver1 { left: 10%;}
+.diver2 { left: 50%;}
+.diver3 { left: 80%;}
+.goldFishSchool{
+    position: absolute;
+    bottom : 70%;
+    width: auto;
+    animation: swim-right 14s infinite;
+}
+.faintSchool{
+    position: absolute;
+    bottom: 40%;
+    width: 100px;
+    animation: swim-left 12s infinite;
+}
+@keyframes swim-right {
+    from {
+        transform: translatex(100vw) scalex(-1);
+    }
+    to {
+        transform: translateX(-200px) scalex(-1);
+    }
+}
+
+@keyframes swim-left {
+    from {
+        transform: translatex(-200px) scalex(1);
+    }
+    to {
+        transform: translateX(100vw) scalex(1);
+    }
+}
+
+@keyframes swim-updown {
+    0%, 100%{
+        transform: translatey(0);
+    }
+    50% {
+        transform: translatey(-20px);
+    }
+}
